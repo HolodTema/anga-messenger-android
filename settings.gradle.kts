@@ -24,4 +24,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "anga-messenger"
 include(":app")
- 
+include(":core:domain")
+include(":core:common")
+include(":core:network")
+include(":core:data")
+include(":core:ui")
+include(":core:database")
+include(":feature:auth")
