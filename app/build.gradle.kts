@@ -6,9 +6,10 @@ plugins {
 android {
     namespace = "com.terabyte.angamessenger"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version =
+            release(37) {
+                minorApiLevel = 1
+            }
     }
 
     defaultConfig {
@@ -26,7 +27,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -40,6 +41,14 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:domain"))
+    implementation(project(":core:network"))
+    implementation(project(":core:ui"))
+    implementation(project(":core:common"))
+    implementation(project(":core:database"))
+    implementation(project(":core:data"))
+    implementation(project(":feature:auth"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
